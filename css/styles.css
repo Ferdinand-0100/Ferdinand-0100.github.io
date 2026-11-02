@@ -627,61 +627,99 @@ section {
     border-bottom: var(--dp-border-panel) solid var(--dp-color-ink);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--dp-spacing-gap);
-}
-
+/* Full-bleed card with overlay info panel */
 .project-card {
-    background: var(--dp-color-contrast);
+    position: relative;
+    width: 100%;
+    min-height: 420px;
     border: var(--dp-border-panel) solid var(--dp-color-ink);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-    transition: none;
-}
-
-.project-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translate(-2px, -2px);
-}
-
-.project-image {
-    height: 200px;
     overflow: hidden;
-    border-bottom: var(--dp-border-panel) solid var(--dp-color-ink);
+    margin-bottom: 2.5rem;
+    display: flex;
 }
 
-.project-image img {
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Full-bleed background image */
+.project-bg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-.project-content {
-    padding: 1.25rem;
+/* Info overlay panel — shared styles */
+.project-overlay {
+    position: relative;
+    z-index: 1;
+    width: 46%;
+    flex-shrink: 0;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Semi-transparent cream: the image shows through */
+    background: rgba(255, 245, 214, 0.82);
+    /* Brutalist border on the open edge */
 }
 
-.project-title {
-    font-size: 1.3rem;
-    font-weight: var(--dp-typography-emphasis-weight);
-    margin-bottom: 0.4rem;
+.project-overlay--left {
+    border-right: var(--dp-border-panel) solid var(--dp-color-ink);
+    order: -1;
+}
+
+.project-overlay--right {
+    border-left: var(--dp-border-panel) solid var(--dp-color-ink);
+    order: 1;
+    margin-left: auto;
+}
+
+.project-number {
+    display: inline-block;
+    font-size: var(--dp-typography-label);
+    font-weight: var(--dp-typography-display-weight);
     color: var(--dp-color-ink);
+    background: var(--dp-color-emphasis);
+    border: var(--dp-border-annotation) solid var(--dp-color-ink);
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.6rem;
+    box-shadow: 2px 2px 0 var(--dp-color-ink);
+    letter-spacing: 0.05em;
+    align-self: flex-start;
 }
 
-.project-desc {
-    font-size: var(--dp-typography-reading);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+.project-feature-title {
+    font-size: 1.5rem;
+    font-weight: var(--dp-typography-display-weight);
+    letter-spacing: var(--dp-typography-display-tracking);
+    margin-bottom: 0.65rem;
     color: var(--dp-color-ink);
-    opacity: 0.8;
+    line-height: 1.1;
+}
+
+.project-overlay p {
+    font-size: var(--dp-typography-small);
+    font-weight: var(--dp-typography-reading-weight);
+    line-height: 1.65;
+    color: var(--dp-color-ink);
+    margin-bottom: 0.75rem;
+}
+
+.project-overlay p:last-of-type {
+    margin-bottom: 0;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    margin-bottom: 0.75rem;
 }
 
 .tech-tag {
@@ -1096,7 +1134,7 @@ footer {
 @media (max-width: 1050px) {
     .strip--paper h1 { font-size: 3.75rem; }
     .hero-avatar { width: 240px; height: 240px; }
-    .projects-grid, .awards-grid, .skills-grid { gap: var(--dp-spacing-gap-compact); }
+    .awards-grid, .skills-grid { gap: var(--dp-spacing-gap-compact); }
 }
 
 @media (max-width: 900px) {
@@ -1120,6 +1158,31 @@ footer {
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    /* Project cards: stack on narrow */
+    .project-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .project-bg {
+        position: relative;
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .project-overlay {
+        width: 100%;
+        order: 1 !important;
+        margin-left: 0 !important;
+        border-right: none;
+        border-left: none;
+        border-top: var(--dp-border-panel) solid var(--dp-color-ink);
+        background: rgba(255, 245, 214, 0.96);
+        justify-content: flex-start;
     }
 }
 

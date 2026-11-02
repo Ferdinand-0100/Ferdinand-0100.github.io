@@ -3,101 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferdinand - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Ferdinand — Game Developer, Teacher, and Competitive Programmer based in Medan, Indonesia.">
+    <title>Ferdinand — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <nav id="navbar">
-        <div class="container">
-            <div class="nav-container"> 
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
-            </div>
+        <div class="container nav-container">
+            <a href="#home" class="logo">FERDINAND</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- HERO — Yellow poster with overlapping strips -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
+        <div class="hero-inner container">
+            <div class="hero-grid">
                 <div class="hero-text">
-                    <h1>Ferdinand</h1>
-                    <p class="tagline">Game Developer | Local Funny Guy | Teacher</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-briefcase"></i>
-                            View My Work
-                        </a>
-                        <a href="mailto:cenferdinand@gmail.com" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Contact Me
-                        </a>
+                    <div class="strip strip--ink">
+                        <p>HELLO, I'M</p>
+                    </div>
+                    <div class="strip strip--paper">
+                        <h1>Ferdinand</h1>
+                    </div>
+                    <p class="hero-id">(241401080, Kom B)</p>
+                    <p class="tagline">Game Developer | Local Comedian | Teacher</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-avatar">
+                        <img src="images/hero.jpg" alt="Ferdinand">
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="avatar">
-                        <img src="images/hero.jpg" alt="Profile"/>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="hero-bar">
+            <div class="container hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                <a href="#about" class="hero-arrow" aria-label="Scroll to About">
+                    <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- ABOUT — Cream paper -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
+                <span class="section-num">01</span>
+                <h2>ABOUT ME</h2>
                 <p>Passionate about creating digital experiences that make a difference</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a professional game developer with over 3 years of experience in this field. My passion lies in creating memorable experiences for years to come.</p>
-                    <p>With expertise spanning from game engines like Unity and Godot, to art platforms like Aseprite and Photoshop, and even back-end technologies like Python, I bring value to every project I work in.</p>
+                    <p>I'm a professional (-ish) game developer with over 4 years of experience in this field, starting all the way back in high school where I developed a game for the student fair. My passion lies in creating memorable experiences for years to come.</p>
+                    <p>With expertise spanning from game engines like Unity and Godot (tried Unreal as well, shame my laptop isn't powerful enough), to art platforms like Aseprite and Photoshop, and even back-end technologies like Python, I bring value to every project I work in.</p>
                     <p>When I'm not coding, you'll find me teaching computer science and website development, mentoring upcoming developers and university students, but most importantly, playing games.</p>
-                    <p>And because my lecturer requires a motto: "Sometimes we chase things so hard, for so long, we forget why we started. And we forget that we're allowed to change."</p>
+                    <p>I really enjoy competitive programming as well. I find it very... fun, in a way. In this era of vibe-coding and whatnot, it's nice being able to actually pause and think about how I'm going to approach a problem.</p>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-year">Now</div>
                         <div class="timeline-title">Game Developer and Computer Teacher</div>
-                        <div class="timeline-desc">Leading development and the future of this country</div>
+                        <div class="timeline-desc">Leading game development projects as well as some very fun and equally eccentric students</div>
                     </div>
                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-year">2024</div>
                         <div class="timeline-title">Start of University</div>
-                        <div class="timeline-desc">Joined and won multiple competitions</div>
+                        <div class="timeline-desc">Joined and a won few competitions</div>
                     </div>
                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-year">2023</div>
                         <div class="timeline-title">English Teacher</div>
-                        <div class="timeline-desc">My first taste in the world of teaching</div>
+                        <div class="timeline-desc">My first taste in the world of teaching, had some very nice students</div>
                     </div>
                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-year">2022</div>
                         <div class="timeline-title">Competitive Programming</div>
-                        <div class="timeline-desc">Started learning essential competitive programming knowledge</div>
+                        <div class="timeline-desc">Started learning essential competitive programming knowledge and participated in a few open competitions</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- EXPERIENCE — White reading area -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2>WORK EXPERIENCE</h2>
+                <p>My professional journey so far</p>
+            </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-marker">01</div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="far fa-calendar"></i> March 2026 – Present</span>
+                        <h3>Software Engineer</h3>
+                        <h4>Erudite English · Medan</h4>
+                        <p>Developed important tools and websites during Erudite English's period of modernization. A notable example is <span style="color: violet;">eruditeenglish.com</span>, an e-learning website still in use by the students and faculty.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-marker">02</div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="far fa-calendar"></i> January 2026 – Present</span>
+                        <h3>English Teacher</h3>
+                        <h4>International Education Centre (IEC) · Medan</h4>
+                        <p>Taught English to students ranging from elementary 6 (SD 6) to grade 12 of senior high school (SMA 3), covering the required materials for their respective levels and following an English-speaking-only environment.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-marker">03</div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="far fa-calendar"></i> March 2025 – Present</span>
+                        <h3>Computer Teacher</h3>
+                        <h4>Erudite English · Medan</h4>
+                        <p>Taught a series of computer science fields, including but not limited to competitive programming, game development, website development, and machine learning.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-marker">04</div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="far fa-calendar"></i> November 2024 – May 2025</span>
+                        <h3>Lecturer's Assistant</h3>
+                        <h4>Dr. Jos Timanta Tarigan S.Kom., M.Sc. · Medan</h4>
+                        <p>Assisted in academic activities and course facilitation under Dr. Jos Timanta Tarigan.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-marker">05</div>
+                    <div class="timeline-card">
+                        <span class="timeline-date"><i class="far fa-calendar"></i> September 2024 – May 2025</span>
+                        <h3>Lead Video Game Developer</h3>
+                        <h4>GeometriSatu (Dr. Jos Timanta Tarigan) · Medan</h4>
+                        <p>Worked on developing and published several "edutainment" video games, where users can play educative games to earn rewards that can be used in an arcade-style shooting game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS — Cream paper -->
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Projects</h2>
+                <span class="section-num">03</span>
+                <h2>FEATURED PROJECTS</h2>
                 <p>A showcase of my recent work and technical achievements</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/edurobots.jpg" alt="Edurobots">
+                        <img src="images/edurobots.jpg" alt="EduRobots — a top-down shooter game tied to an economy of education">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">EduRobots</h3>
@@ -113,7 +203,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/redbaron.png" alt="RedBaron">
+                        <img src="images/redbaron.png" alt="Red Baron — an online 1v1 shooter game for the PMB Showcase at USU">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Red Baron</h3>
@@ -128,11 +218,11 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/seo.png" alt="SEO">
+                        <img src="images/seo.png" alt="Web SEO Analyzer — a website performance improvement tool based on online data scraping">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Web SEO Analyzer</h3>
-                        <p class="project-desc">A website made to improve the performance of a user's website based on online data scrapping.</p>
+                        <p class="project-desc">A website made to improve the performance of a user's website based on online data scrapping for the Google DevFest Hackathon.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -146,112 +236,197 @@
         </div>
     </section>
 
+    <!-- AWARDS — White reading area -->
     <section class="awards" id="awards">
         <div class="container">
             <div class="section-header">
-                <h2>Awards & Achievements</h2>
+                <span class="section-num">04</span>
+                <h2>AWARDS &amp; ACHIEVEMENTS</h2>
                 <p>Recognition for excellence in development and innovation</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/toefl.jpg" alt="TOEFL">
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-image">
+                        <img src="images/toefl.jpg" alt="TOEFL Junior perfection award certificate">
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Perfection Award</h3>
-                        <p class="project-desc">Achieving a perfect scrore in TOEFL Junior.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/medals.jpg" alt="Medals">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">A Shit Ton of Medals</h3>
-                        <p class="project-desc">Mostly English competitions though.</p>
+                    <div class="award-content">
+                        <h3 class="award-title">Perfection Award</h3>
+                        <p class="award-desc">For achieving a perfect scrore in TOEFL Junior.</p>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/devfest.jpg" alt="DevFest">
+                <div class="award-card">
+                    <div class="award-image">
+                        <img src="images/medals.jpg" alt="Collection of competition medals">
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">DevFest Award</h3>
-                        <p class="project-desc">Top 5 DevFest Hackathon held by Google Developer Groups USU.</p>
+                    <div class="award-content">
+                        <h3 class="award-title">A Shit Ton of Medals</h3>
+                        <p class="award-desc">Mostly English competitions though.</p>
+                    </div>
+                </div>
+
+                <div class="award-card">
+                    <div class="award-image">
+                        <img src="images/devfest.jpg" alt="DevFest Hackathon award certificate">
+                    </div>
+                    <div class="award-content">
+                        <h3 class="award-title">DevFest Award</h3>
+                        <p class="award-desc">Top 5 @ DevFest Hackathon held by Google Developer Groups Medan.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS — Cream paper -->
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-header">
-                <h2>Skills & Expertise</h2>
+                <span class="section-num">05</span>
+                <h2>SKILLS &amp; EXPERTISE</h2>
                 <p>Technical proficiencies and areas of specialization</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon"><i class="fas fa-code"></i></span>
+                        <h3>Competitive Programming</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">HTML</span>
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">CSS</span>
-                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Backend Development</h3>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon"><i class="fas fa-gamepad"></i></span>
+                        <h3>Game Development</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Anything Cloud related</span>
-                        <span class="skill-item">Django</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Godot</span>
+                        <span class="skill-tag">Aseprite</span>
+                        <span class="skill-tag">Photoshop</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Database & Cloud</h3>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon"><i class="fas fa-laptop-code"></i></span>
+                        <h3>Web Development</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Google APIs</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Node.js</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Tools & Design</h3>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon"><i class="fas fa-comments"></i></span>
+                        <h3>English Communication</h3>
+                    </div>
                     <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Figma</span>
-                        <span class="skill-item">Photoshop</span>
-                        <span class="skill-item">Unity</span>
-                        <span class="skill-item">Unreal</span>
-                        <span class="skill-item">Godot</span>
-                        <span class="skill-item">Blender</span>
-                        <span class="skill-item">DaVinci</span>
+                        <span class="skill-tag">Teaching</span>
+                        <span class="skill-tag">Simplifying Topics</span>
+                        <span class="skill-tag">Communication</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- EDUCATION — White reading area -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">06</span>
+                <h2>EDUCATION</h2>
+                <p>My academic background</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <span class="education-icon"><i class="fas fa-university"></i></span>
+                    <h3>Universitas Sumatera Utara</h3>
+                    <p class="education-degree">S1 Ilmu Komputer</p>
+                    <p class="education-year">Expected 2027 · Medan</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="education-icon"><i class="fas fa-school"></i></span>
+                    <h3>SMA Sutomo 1</h3>
+                    <p class="education-degree">IPA (Science)</p>
+                    <p class="education-year">Graduated 2024 · Medan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT — Violet band -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">07</span>
+                <h2>GET IN TOUCH</h2>
+                <p>Let's connect and build something great together</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:cenferdinand@gmail.com" class="contact-card">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                    <h3>Email</h3>
+                    <p>cenferdinand@gmail.com</p>
+                </a>
+                <a href="tel:+62895324633717" class="contact-card">
+                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                    <h3>Phone</h3>
+                    <p>+62 895 3246 33717</p>
+                </a>
+                <div class="contact-card">
+                    <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <h3>Location</h3>
+                    <p>Medan, 20532</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING — Red field with yellow poster -->
+    <section class="closing">
+        <div class="closing-inner container">
+            <div class="closing-poster">
+                <p>A video game addict disguised as a developer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER — Grouped -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ferdinand</h3>
-                    <p>A video game addict disguised as a developer.</p>
+            <div class="footer-groups">
+                <div class="footer-group">
+                    <h3>FERDINAND</h3>
+                    <p>Game Developer | Teacher | Competitive Programmer</p>
+                </div>
+                <div class="footer-group">
+                    <h3>CONNECT</h3>
+                    <div class="footer-links">
+                        <a href="mailto:cenferdinand@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+62895324633717"><i class="fas fa-phone"></i></a>
+                        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Ferdinand. All rights reserved.</p>
+                <p>Hehe hi there, copyright all rights reserved something something...</p>
             </div>
+        </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
